@@ -51,25 +51,19 @@
     <!--settings tab-->
 
     <div tab="Settings">
-        <div class="settings_onImageClick"
-             wix-ctrl="DropDown"
-             wix-param="dropdown"
-             wix-options="{
-                    title: 'When image is clicked',
-                    defaultValue: '0',
-                    options: [
-                        { value: '0', label: 'Enter expand mode'},
-                        { value: '1', label: 'Show on full screen'},
-                        { value: '2', label: 'Do nothing'}
-                    ]
-                }"
-        ></div>
+        <div wix-ctrl="SectionDividerLabeled"
+             wix-options="{label: 'General'}">
+        </div>
 
         <hr class="divider-long"/>
 
-        <div wix-ctrl="SectionDividerLabeled"
-             wix-options="{label: 'Enable functionality'}">
-        </div>
+        <div class="settings_textFieldContent"
+             wix-ctrl="Input"
+             wix-options="{
+                    title: 'Please enter your live certificate url',
+                    defaultText: 'https://portal.nextinsurance.com/certificates/live-certificate/a904576e8d917bddda63d949c15b13ac'
+                }"
+        ></div>
 
         <hr class="divider-long"/>
 
@@ -137,82 +131,6 @@
                     }"
             ></div>
         </div>
-
-        <hr class="divider-long"/>
-
-        <div id= "radio" class="settings_taxOnImage"
-             wix-ctrl="RadioButtons"
-             wix-param="radioBtns"
-             wix-options="{
-                    title: 'Do images show text?',
-                    defaultValue: 'both',
-                    options: [
-                        { value: '1', label: 'A title and a description', disabled: true,},
-                        { value: '2', label: 'Just a title'},
-                        { value: '3', label: 'Just a description'}
-                    ]
-                }"
-        ></div>
-
-
-        <hr class="divider-long"/>
-
-        <div class="settings_textFieldContent"
-             wix-ctrl="Input"
-             wix-options="{
-                    title: 'Text field',
-                    defaultText: 'Title'
-                }"
-        ></div>
-
-        <hr class="divider-long"/>
-
-        <div class="settings_textAreaContent"
-             wix-ctrl="Input"
-             wix-options="{
-                    title: 'Text area',
-                    focus: true,
-                    defaultText: 'Paragraph',
-                    isMultiLine: true
-                }"
-        ></div>
-    </div>
-
-    <!--layout tab-->
-
-    <div tab="Layout">
-        <hr class="divider-long"/>
-
-        <div wix-ctrl="SectionDividerLabeled"
-             wix-options="{label: 'How does this gallery look?'}">
-        </div>
-
-        <hr class="divider-long"/>
-
-        <div class="layout_columns"
-             id="slide_column"
-             wix-ctrl="Slider"
-             wix-param="columnSlider"
-             wix-options="{
-                    title: 'Columns',
-                    min: 1,
-                    max: 36,
-                    defaultValue: 7
-                }"
-        ></div>
-
-        <hr class="divider-long"/>
-
-        <div class="layout_spacing"
-             wix-ctrl="Slider"
-             wix-param="spaceSlider"
-             wix-options="{
-                    title: 'Spacing (px)',
-                    min: 0,
-                    max: 50,
-                    defaultValue: 10
-                }"
-        ></div>
     </div>
 
     <!--Design tab-->
@@ -239,19 +157,6 @@
 
         <hr class="divider-long"/>
 
-        <div wix-param-font="_descFont"
-             wix-param-color="_descColor"
-             wix-ctrl="FontAndColorPicker"
-             wix-options="{
-                    title: 'Description Font style & color',
-                    startWithColor: 'color-4',
-                    startWithTheme:'font_8',
-                    infoText: 'some information text should be here'
-                }"
-        ></div>
-
-        <hr class="divider-long"/>
-
         <div wix-param="_backgroundColor"
              wix-ctrl="ColorPickerSlider"
              wix-options="{
@@ -263,34 +168,11 @@
         <hr class="divider-long"/>
 
         <div wix-ctrl="SectionDividerLabeled"
-             wix-options="{label: 'Search fields'}">
+             wix-options="{label: 'Border'}">
         </div>
 
         <hr class="divider-long"/>
 
-        <div wix-param-font="_inputFont"
-             wix-param-color="_inputColor"
-             wix-ctrl="FontAndColorPicker"
-             wix-options="{
-                    title: 'Input field text font and color',
-                    startWithColor: 'color-1',
-                    startWithTheme:'font_8',
-                    infoText: 'some information text should be here'
-                }"
-        ></div>
-
-        <hr class="divider-long"/>
-
-        <div wix-param="_inputFieldBackground"
-             wix-ctrl="ColorPickerSlider"
-             wix-options="{
-                    title: 'Input Field Background',
-                    startWithColor: 'color-4',
-                    startWithOpacity: 1
-                }"
-        ></div>
-
-        <hr class="divider-long"/>
 
         <div wix-param="_borderColor"
              wix-ctrl="ColorPickerSlider"
@@ -303,120 +185,6 @@
 
         <hr class="divider-long"/>
 
-        <div wix-param="_hrColor"
-             wix-ctrl="ColorPickerSlider"
-             wix-options="{
-                    title: 'Divider Color',
-                    startWithColor: 'color-2',
-                    startwithOpacity: 1
-                }"
-        ></div>
-
-        <hr class="divider-long"/>
-
-        <div wix-ctrl="SectionDividerLabeled"
-             wix-options="{label: 'Button'}">
-        </div>
-
-        <hr class="divider-long"/>
-
-        <div wix-param-font="_btnFont"
-             wix-param-color="_btnTextColor"
-             wix-ctrl="FontAndColorPicker"
-             wix-options="{
-                    title: 'Button Font  & Color',
-                    startWithColor: 'color-1',
-                    startWithTheme:'font_8',
-                    startWithSize:15,
-                    infoText: 'some information text should be here'
-                }"
-        ></div>
-
-        <hr class="divider-long"/>
-
-        <div wix-param="_btnBgColor"
-             wix-ctrl="ColorPickerSlider"
-             wix-options="{
-                    title: 'Button Background',
-                    startWithColor: 'color-8'
-                }"
-        ></div>
-    </div>
-
-    <!--Animations tab-->
-
-    <div tab="Animations" class="animations-tab">
-        <div id=dropdown class="animations_type"
-             wix-ctrl="DropDown"
-             wix-param="animation"
-             wix-options="{
-                title: 'Animation',
-                defaultValue: '0',
-                options: [
-                    { value: '0', label: 'Slide'},
-                    { value: '1', label: 'Fade'},
-                    { value: '2', label: 'Something else'}
-                ]}"
-        ></div>
-
-        <hr class="divider-long"/>
-
-        <div wix-ctrl="SectionDividerLabeled"
-             wix-options="{label: 'Animation settings', infoText: 'info text'}">
-        </div>
-
-        <hr class="divider-long"/>
-
-        <div class="button-wrapper-center">
-            <div class="animations_button"
-                 wix-ctrl="Button"
-                 wix-options="{
-                        label: 'Play Animation',
-                        className: 'btn-confirm-secondary',
-                        icon: 'playAnimation'
-                    }"
-            ></div>
-        </div>
-
-        <hr class="divider-long"/>
-
-        <div class="animations_direction"
-             wix-ctrl="DropDown"
-             wix-options="{
-                    title: 'Direction',
-                    defaultValue: 'right',
-                    options: [
-                        { value: '1', label: 'From Top'},
-                        { value: '2', label: 'From Right'},
-                        { value: '3', label: 'From Bottom'},
-                        { value: '4', label: 'From Left'}
-                    ]
-                }"
-        ></div>
-
-        <hr class="divider-long"/>
-
-        <div class="animations_delay"
-             wix-ctrl="Slider"
-             wix-options="{
-                    title: 'Delay (secs)',
-                    min: 0,
-                    max: 2,
-                    step: 0.1,
-                    defaultValue: 0.6
-                }"
-        ></div>
-
-        <hr class="divider-long"/>
-
-        <div id="ToggleSwitch" class="animations_oppositeEffect"
-             wix-ctrl="ToggleSwitch"
-             wix-options="{
-                        label: 'Opposite effect',
-                        defaultValue: true,
-                        infoText: 'some information text should be here'
-                    }"
-        ></div>
     </div>
 
     <hr class="divider-short"/>
