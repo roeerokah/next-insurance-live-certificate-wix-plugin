@@ -1,37 +1,87 @@
-.wix-style-sample {
-    padding: 15px;
+.ni-hidden {
+    display: none;
+}
 
-    h3, p {
-        margin: 0;
-        padding: 0;
-    }
+.ni-banner {
+    display: flex;
+    flex-direction: row;
+}
 
-    .sample-element {
-        margin: 5px 0;
-    }
+.ni-vMark {
+    color: green;
+    padding: 3px;
+}
 
-    .sample-button {
-        padding: 10px 15px;
-        border: 0;
-        width:100%;
-    }
+.ni-info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 20px;
+    width: 200px;
+    padding: 10px;
+}
 
-    .sample-input {
-        padding: 10px 15px;
-        border: 1px solid black;
-        width:100%;
-        box-sizing: border-box;
-    }
+.ni-info .ni-business-name{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
 
-    .form {
-        display: block;
-        margin-top: 10px;
-    }
-    pre{
-       white-space: pre-line;
-    }
-    .navtohome{
-      cursor: pointer;
-      text-decoration: none;
-    }
+.ni-info .ni-induredByContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.ni-info .ni-insuredByContainer .ni-vMark {
+    font-size: 20px;
+
+}
+
+.ni-info .ni-induredByContainer .ni-insuredByLabel{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.ni-info .ni-induredByContainer .ni-nextLogo{
+    width: 60px;
+    height: 25px;
+    padding-left: 5px;
+}
+
+.ni-info .ni-verifiedContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.ni-info .ni-verifiedContainer .ni-verfied{
+    padding-right: 5px;
+}
+
+.ni-info .ni-moreInfo{
+    text-align: center;
+}
+
+.ni-shieldContainer{
+    width: 128px;
+    height: 128px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.ni-shieldContainer .ni-shield{
+    position: relative;
+    height: 128px;
+    width:128px;
+}
+
+.ni-shieldContainer .ni-nextCapitalN{
+    color: white;
+    font-size: 75px;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -60px;
+    margin-left: -25px;
 }

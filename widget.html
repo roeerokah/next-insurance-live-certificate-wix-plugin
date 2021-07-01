@@ -10,10 +10,10 @@
     <script src="dist/widget.js"></script>
 
     <style wix-style>
-        .wix-style-sample {
+        .banner {
             background: {{style._backgroundColor color-1}};
         }
-        .sample-title {
+        .ni-insuredByLabel {
             {{style._titleFont Heading-L}}
             color: {{style._titleColor color-5}};
         }
@@ -66,22 +66,25 @@
 <body>
 <div id="root">
     <div>
-            <div class="wix-style-sample">
-                <h3 class="sample-element sample-title">Demo App</h3>
-                <p class="sample-element sample-content">Welcome to Demo App, let's play!</p>
-                <form class="form">
-                    <input title="email" type="email" class="sample-element sample-input" placeholder="I'm an email text field!" >
-                </form>
-                <button class="sample-element sample-button">Click me!</button>
-                <br/>
-                <a class="navtohome">Go to Homepage</a>
-                <br/>
-                <hr/>
-                <h3 class="sample-element sample-settings-title">Last settings update</h3>
-                <pre>
-                    <code class="json sample-content"></code>
-                </pre>
+        <div class="ni-banner">
+            <div class="ni-shieldContainer">
+                <img src="https://live-cert-plugin-assets.s3.us-west-2.amazonaws.com/verified-ni-logo.png">
             </div>
+            <div class="ni-info">
+                <div id="businessName" class="ni-business-name"></div>
+                <div class="ni-induredByContainer">
+                    <div class="ni-vMark">✔</div>
+                    <div class="ni-insuredByLabel"> Insured by</div>
+                    <img class="ni-nextLogo" src="https://live-cert-plugin-assets.s3.us-west-2.amazonaws.com/logo.svg"></img>
+                </div>
+                <div class="ni-verifiedContainer">
+                    <a id="certificateProof" target="_blank" class="ni-verfied" rel=”nofollow”>Verified</a>
+                    <div id="verifiedTimestamp"></div>
+                </div>
+                <a target="_blank" class="ni-moreInfo" rel=”nofollow”
+                   href="https://www.nextinsurance.com/business-insurance/" >Learn more</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
