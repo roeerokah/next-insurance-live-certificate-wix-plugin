@@ -2,8 +2,8 @@
   "name": "tpa-demo-app-jQuery",
   "version": "0.0.1",
   "scripts": {
-    "start": "node server.js",
-    "tt": "npm install && webpack && npm start"
+    "server": "node server.js",
+    "start": "webpack && npm run server"
   },
   "dependencies": {
     "jquery": "^3.0.0",
